@@ -69,4 +69,21 @@ describe('Calculator', () => {
         expect(result).toBe(5);
     });
 
+    it("should give undefined if sqrt of negative value is done", () => {
+        // Act and Assert
+        expect(() => calc.sqrt(-a)).toThrow("Undefined");
+    });
+
+    it("should give square root value", () => {
+        // Act
+        let result = calc.pow(a, 2);
+        // Assert
+        expect(result).toBe(a*a + 1);;
+    });
+
+    it("should convert from cm to inches", () => {
+        let result = calc.cm_to_inch(100);
+        expect(result).toBe(39.3701)
+    })
+
 });
