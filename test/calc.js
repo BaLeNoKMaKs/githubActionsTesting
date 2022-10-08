@@ -78,7 +78,7 @@ describe('Calculator', () => {
         // Act
         let result = calc.pow(a, 2);
         // Assert
-        expect(result).toBe(a*a + 1);;
+        expect(result).toBe(a*a);;
     });
 
     it("should convert from cm to inches", () => {
