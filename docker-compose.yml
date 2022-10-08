@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  build:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: on-failure
+    ports:
+      - "443:443"
+    command: node index.js
+
+  latest:
+    extends: build
+    image: study:latest
+
+  currentVersion:
+    extends: build
+    image: study:${v}
