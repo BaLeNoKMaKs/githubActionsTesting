@@ -59,6 +59,22 @@ class Calculator {
 
         } return result;
     }
+
+    cm_to_inch(a) {
+        return a * 0.393701;
+    }
+
+    sqrt(a) {
+        if (a<0) {
+            throw 'Undefined'
+        } else {
+            return Math.sqrt(a);
+        }
+    }
+
+    pow(a, b) {
+        return Math.pow(a, b);
+    }
 }
 
 module.exports = Calculator;
